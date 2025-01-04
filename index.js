@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://password-reset-flow-client-ui.netlify.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -90,7 +90,7 @@ app.post("/forgotpassword", async (req, res) => {
       },
     });
 
-    const resetURL = `http://localhost:5173/resetpassword/${user._id}/${token}`;
+    const resetURL = `https://password-reset-flow-client-ui.netlify.app/resetpassword/${user._id}/${token}`;
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
@@ -160,8 +160,5 @@ app.post("/resetpassword/:id/:token", async (req, res) => {
 
 // Starting the server
 app.listen(`${process.env.PORT}`, `${process.env.HOSTNAME}`, function () {
-  console.log(
-    `Server Started at http://${process.env.HOSTNAME}:${process.env.PORT}`
-  );
   createDbConnection();
 });
