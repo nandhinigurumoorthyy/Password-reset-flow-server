@@ -28,8 +28,8 @@ The backend is built with **Node.js**, **Express**, and **MongoDB**.
 
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/nandhinigurumoorthyy/Password-rest-flow-server.git)
-   cd Password-rest-flow-server
+   git clone (https://github.com/nandhinigurumoorthyy/Password-reset-flow-server.git)
+   cd Password-reset-flow-server
    ```
 
 2. Install dependencies:
@@ -74,7 +74,7 @@ The backend is built with **Node.js**, **Express**, and **MongoDB**.
      - `EMAIL_PASS`
    - Choose a region closest to your users for optimal performance.
 3. Click **Deploy**.
-4. After deployment, Render will provide you with a URL (`https://password-reset-backend.onrender.com`).
+4. After deployment, Render will provide you with a URL (`https://password-reset-flow-server-0ne8.onrender.com`).
 
 ---
 
@@ -169,7 +169,7 @@ The backend is built with **Node.js**, **Express**, and **MongoDB**.
 
 Ensure your frontend is configured to use the deployed backend URL. For example:
 ```javascript
-const API_URL = 'https://password-reset-backend.onrender.com';
+const API_URL = `https://password-reset-flow-server-0ne8.onrender.com`;
 axios.post(`${API_URL}/create`, { name, email, password });
 ```
 
