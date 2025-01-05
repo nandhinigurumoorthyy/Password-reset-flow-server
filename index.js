@@ -14,7 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://password-reset-flow-client-ui.netlify.app",
+    origin: [
+      "https://password-reset-flow-client-ui.netlify.app",
+      "http://0.0.0.0:10000",
+    ],
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -22,17 +25,20 @@ app.use(
 app.use(cookieParser());
 
 // API Route for creating a user
-app.post("/create", async (req, res) => {
-  console.log(req.body);
-  try {
-    const user = new UserModel(req.body);
-    const result = await user.save();
-    res.json({ status: "Success", user: result });
-  } catch (err) {
-    console.error("Error creating user:", err.message);
-    res.status(500).json({ status: "ERROR", message: err.message });
+app.post(
+  "/create",
+  async (req, res) => {
+    console.log(req.body);
+    try {
+      const user = new UserModel(req.body);
+      const result = await user.save();
+      res.json({ status: "Success", user: result });
+    } catch (err) {
+      console.error("Error creating user:", err.message);
+      res.status(500).json({ status: "ERROR", message: err.message });
+    }
   }
-});
+);
 
 // API Route for user login
 app.post("/login", async (req, res) => {
