@@ -16,9 +16,9 @@ app.use(
   cors({
     origin: [
       "https://password-reset-flow-client-ui.netlify.app",
-      "http://0.0.0.0:10000",
+      "http://0.0.0.0:10000","http://localhost:10001","http://localhost:10000","http://localhost:3000","http://localhost:5173"
     ],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET","PUT"],
     credentials: true,
   })
 );
