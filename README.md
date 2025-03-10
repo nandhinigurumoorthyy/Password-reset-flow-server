@@ -5,6 +5,18 @@ The backend is built with **Node.js**, **Express**, and **MongoDB**.
 
 ---
 
+## Deployed Links
+- Backend Live URL: https://password-reset-flow-server-0ne8.onrender.com
+- Frontend Live URL: https://password-reset-flow-client-ui.netlify.app
+
+----
+
+## GitHub Repositories
+
+Frontend GitHub Repo: https://github.com/nandhinigurumoorthyy/Password-reset-flow-client
+
+-----
+
 ## Features
 
 - User Signup
