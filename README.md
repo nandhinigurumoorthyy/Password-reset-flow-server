@@ -86,7 +86,7 @@ Frontend GitHub Repo: https://github.com/nandhinigurumoorthyy/Password-reset-flo
      - `EMAIL_PASS`
    - Choose a region closest to your users for optimal performance.
 3. Click **Deploy**.
-4. After deployment, Render will provide you with a URL (`https://password-reset-flow-server-0ne8.onrender.com`).
+4. After deployment, Render will provide you with a URL.
 
 ---
 
